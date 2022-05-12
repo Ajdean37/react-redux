@@ -18,6 +18,9 @@ const HomeView = () => {
         <button onClick={handleNavigateUser} >Programatically Route User to About Page</button>
       </div>
 
+      <br></br>
+      <Link to='launches'>Go To Launches</Link>
+
     </div>
   );
 }
