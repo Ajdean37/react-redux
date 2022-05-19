@@ -21,7 +21,9 @@ function* selectLaunchById( action ) {
 
   try {
    
-    console.log(action);
+    const response = yield axios.get(`https://api.spacexdata.com/v5/launches/${action.payload.id}`);
+    
+    yield put( {type: 'SET_SELECTED_LAUNCHES', payload: response.data} );
 
   }catch ( error ) {
     console.error(error);
